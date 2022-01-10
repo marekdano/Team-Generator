@@ -34,30 +34,49 @@
                 </div>
             </div>
             <div class="col-4">
-                <div class="container-fluid m-5">
-                    <input id="inputGroupNumber" type="number">
-                    <textarea id="outArray" rows="15" cols="30"></textarea>
-                    <button id="Btn">Generate</button>
+
+                <div class="container-fluid d-flex input-group bg-primary m-2  p-3 rounded">
+
+                    <div class="d-grid col-8 mx-auto">
+                        <div>
+                            <p class="fs-1 fw-bold">Team Generator</p>
+                        </div>
+                    </div>
+
+                    <div class=" input-group m-1 ms-5 me-5">
+                        <div class="d-grid col-10 ">
+                            <p class="fs-6 font-monospace">Please enter your group number</p>
+                            <div></div>
+                        </div>
+
+                        <div class="d-grid col-2">
+                            <div class=" input-group mb-3 ">
+                                <input id=" inputGroupNumber" type="number" class="form-control" placeholder=""
+                                    aria-label="Username" aria-describedby="basic-addon1">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class=" input-group  d-flex ms-5 me-5">
+                        <textarea id="outArray" class=" form-control" rows="10
+                        " aria-label="With textarea"></textarea>
+                    </div>
+
+                    <div class=" input-group m-5 d-grid">
+                        <button id="generate-button" class="btn btn-danger">Generate Teams</button>
+                    </div>
+
                 </div>
             </div>
-            <div class="col-2">
-                <div class="container-fluid mt-5 input-group"">
-                <!-- <div id=" inputArray"></div> -->
-                <div class="input-group">
-                    <textarea class="form-control" style="min-width: 100%" aria-label="With textarea"></textarea>
+
+            <div class="col-4">
+                <div class="container-fluid d-flex input-group bg-primary m-2  p-3 rounded">
+                    <div class=" input-group m-5 d-grid">
+                        <div id=" inputArray"></div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col-2">
-            <div class="container-fluid input-group d-flex align-items-bottom bg-primary"">
-            <!-- <div id=" inputArray"></div> -->
-            <div class="input-group mt-5 ">
-                <textarea class="form-control" rows="10
-                " aria-label="With textarea"></textarea>
-            </div>
-        </div>
-    </div>
-    </div>
     </div>
     </div>
     </div>

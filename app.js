@@ -46,23 +46,35 @@ const groupPlayers = function (array, groupNum) {
     }
 
 
-    let str = "<ol>"
-    Object.entries(groups).forEach(([key, value]) => {
-        console.log(key, value)
-        str += "<li>"
-        for (let person of value) {
-            str += "<p>" + person + "</p>"
-        }
-        str += "</li>"
-    });
-    str += "</ol>"
-    document.getElementById("inputArray").innerHTML = str
+    // let str = "<ol>"
+    // Object.entries(groups).forEach(([key, value]) => {
+    //     console.log(key, value)
+    //     str += "<li>"
+    //     for (let person of value) {
+    //         str += "<p>" + person + "</p>"
+    //     }
+    //     str += "</li>"
+    // });
+    // str += "</ol>"
+    // document.getElementById(" inputArray").innerHTML = str
 
-    return areaArray = JSON.stringify(groups)
+    let olElement = document.createElement("ol")
+    Object.entries(groups).forEach(([key, value]) => {
+        let liElement = document.createElement("li")
+        for (let person of value) {
+            let pElement = document.createElement("p")
+            pElement.innerHTML = person
+            liElement.appendChild(pElement)
+        }
+        olElement.appendChild(liElement)
+
+    })
+    document.getElementById(" inputArray").replaceChildren(olElement)
+    //return areaArray = JSON.stringify(groups)
 };
 
 
-document.getElementById("Btn").addEventListener("click", sendToArray);
+document.getElementById("generate-button").addEventListener("click", sendToArray);
 
 function sendToArray() {
     const areaContent = document.getElementById("outArray").value
@@ -71,13 +83,13 @@ function sendToArray() {
     const prepareContent = areaContent.replaceAll("\r", " ").replaceAll("\n", " ").split(' ').filter(item => item !== '')
     box = prepareContent
 
-    const groupNum = document.getElementById("inputGroupNumber").value;
+    const groupNum = document.getElementById(" inputGroupNumber").value;
 
     const shuffled = shuffling(box);
 
 
 
-    return groupPlayers(shuffled, groupNum);
+    groupPlayers(shuffled, groupNum);
 
 }
 
