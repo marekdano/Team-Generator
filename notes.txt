@@ -9,3 +9,9 @@ stratch rules div
 how to use different colors in bootstrap
 
 css for ol and children
+
+pick right color birghter
+
+css for ol and children
+
+js how to create a line withing a string
