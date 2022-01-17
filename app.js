@@ -71,16 +71,16 @@ const groupPlayers = function (array, groupNum) {
     // })
     // document.getElementById(" inputArray").replaceChildren(olElement)
 
-    let str = "<ol>"
+    let str = ''
     Object.entries(groups).forEach(([key, value], index) => {
         console.log(key, value)
-        str += "<li>"
+        str += `${index + 1}.\n\n`
         for (let person of value) {
-            str += "<p>" + person + "</p>"
+            str +=
+                `${person}\n`
         }
-        str += "</li>"
+        str += `\n\n\n`
     });
-    str += "</ol>"
     document.getElementById(" inputArray").innerHTML = str
 
 };
