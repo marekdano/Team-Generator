@@ -58,19 +58,31 @@ const groupPlayers = function (array, groupNum) {
     // str += "</ol>"
     // document.getElementById(" inputArray").innerHTML = str
 
-    let olElement = document.createElement("ol")
-    Object.entries(groups).forEach(([key, value]) => {
-        let liElement = document.createElement("li")
-        for (let person of value) {
-            let pElement = document.createElement("p")
-            pElement.innerHTML = person
-            liElement.appendChild(pElement)
-        }
-        olElement.appendChild(liElement)
+    // let olElement = document.createElement("ol")
+    // Object.entries(groups).forEach(([key, value]) => {
+    //     let liElement = document.createElement("li")
+    //     for (let person of value) {
+    //         let pElement = document.createElement("p")
+    //         pElement.innerHTML = person
+    //         liElement.appendChild(pElement)
+    //     }
+    //     olElement.appendChild(liElement)
 
-    })
-    document.getElementById(" inputArray").replaceChildren(olElement)
-    //return areaArray = JSON.stringify(groups)
+    // })
+    // document.getElementById(" inputArray").replaceChildren(olElement)
+
+    let str = "<ol>"
+    Object.entries(groups).forEach(([key, value], index) => {
+        console.log(key, value)
+        str += "<li>"
+        for (let person of value) {
+            str += "<p>" + person + "</p>"
+        }
+        str += "</li>"
+    });
+    str += "</ol>"
+    document.getElementById(" inputArray").innerHTML = str
+
 };
 
 
