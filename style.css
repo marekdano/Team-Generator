@@ -11,6 +11,8 @@ body {
     background: url("assets/images/background.jpeg");
     /* background-size: auto 100%; */
     background-size: cover;
+    color:rgba(0, 0, 0);
+    /* font-weight:; */
     /* background-repeat:no-repeat; */
     font-size: 16px;
     font-family: 'Montserrat', sans-serif;
@@ -73,11 +75,11 @@ section {
 section h1 {
     /* color:rgb(14, 90, 105); */
     color:rgb(14, 90, 105);
-    padding: 1rem;
+    /* padding: 1rem; */
 }
 
 .text-area {
-    background-color: #d6d6d6;
+    background-color: #ececec;
     padding: 2rem;
     border-radius: 15px;
     height: 70%;
@@ -85,9 +87,9 @@ section h1 {
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
-.bold-number {
+/* .bold-number {
     font-weight:bold;
-}
+} */
 
 .solid-bottom{
     background-color: rgb(62, 223, 255);
@@ -124,13 +126,22 @@ section h1 {
 #number-container input{
     /* flex-grow: 1; */
     width: 10%;
+padding: 2% 0 0 2%;
 
+    
 }
+
+#tools-user-action textarea{
+
+    padding: 0.5rem 0 0 0.5rem;
+box-shadow: inset 1px 1px 1px grey;
+
+    }
 
 #generate-button {
     background-color: rgb(62, 223, 255);
     border: 0;
-    border-radius: 12px;
+    border-radius: 50px;
     color: #363636;
     cursor: pointer;
     display: inline-block;
@@ -153,5 +164,18 @@ section h1 {
     box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(97, 97, 97, 0.5), .125rem .125rem 1rem rgba(58, 58, 58, 0.5);
 
 }
+
+
+#groups-output-container textarea{
+width: 98%;
+height: 98%;
+padding: 2% 0 0 2%;
+box-shadow: inset 1px 1px 1px grey;
+
+}
+
+/* #inputArray {
+margin: 4rem 0;
+} */
 
 

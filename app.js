@@ -74,7 +74,7 @@ const groupPlayers = function (array, groupNum) {
     let str = ''
     Object.entries(groups).forEach(([key, value], index) => {
         console.log(key, value)
-        str += `${index + 1}.\n\n`
+        str += `Team ${index + 1}\n\n`
         for (let person of value) {
             str +=
                 `${person}\n`
