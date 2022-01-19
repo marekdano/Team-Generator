@@ -14,7 +14,7 @@
 ---
 ## Description
 
-Team generator is a sleeky App that allows you to enter a list of name and create how many groups you wish in a random fashion.
+Team generator is a sleek App that allows you to enter a list of name and create how many groups you wish in a random fashion.
 
 When names are entered, space between letters counts and it is considerated a separator from one name to another.
 The programme uses a Fisher-Yates method to shuffle names and then people are distributed evenly to all teams. When it is not possible to have evenly teams the remaining people are distribuited starting from the first team towards the last.
