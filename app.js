@@ -1,15 +1,13 @@
 //varaibles
 box = []
 
-//shuffling role
+//shuffling rule
 const shuffling = array => {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
-        console.log(j)
         const temp = array[i];
         array[i] = array[j];
         array[j] = temp;
-        console.log(array)
     }
     return array
 }
@@ -17,9 +15,8 @@ const shuffling = array => {
 //sorting people
 const groupPlayers = function (array, groupNum) {
     const groups = {};
-    const peopleLeftOut = array.length % groupNum
-    const peopleEven = array.length - peopleLeftOut
-    const remainderPeople = array.slice(-peopleLeftOut)
+    const peopleLeftOut = array.length % groupNum;
+    const peopleEven = array.length - peopleLeftOut;
 
     if (array.length % groupNum === 0) {
         for (let i = 1; i <= groupNum; i++) {
@@ -37,39 +34,10 @@ const groupPlayers = function (array, groupNum) {
         }
 
         for (let j = 1; j <= remainderPeople.length; j++) {
-
             groups[j].push(remainderPeople[j - 1]
-
             );
         }
-
     }
-
-
-    // let str = "<ol>"
-    // Object.entries(groups).forEach(([key, value]) => {
-    //     console.log(key, value)
-    //     str += "<li>"
-    //     for (let person of value) {
-    //         str += "<p>" + person + "</p>"
-    //     }
-    //     str += "</li>"
-    // });
-    // str += "</ol>"
-    // document.getElementById(" inputArray").innerHTML = str
-
-    // let olElement = document.createElement("ol")
-    // Object.entries(groups).forEach(([key, value]) => {
-    //     let liElement = document.createElement("li")
-    //     for (let person of value) {
-    //         let pElement = document.createElement("p")
-    //         pElement.innerHTML = person
-    //         liElement.appendChild(pElement)
-    //     }
-    //     olElement.appendChild(liElement)
-
-    // })
-    // document.getElementById(" inputArray").replaceChildren(olElement)
 
     let str = ''
     Object.entries(groups).forEach(([key, value], index) => {
@@ -81,7 +49,8 @@ const groupPlayers = function (array, groupNum) {
         }
         str += `\n\n\n`
     });
-    document.getElementById(" inputArray").innerHTML = str
+    return str
+
 
 };
 
@@ -90,7 +59,6 @@ document.getElementById("generate-button").addEventListener("click", sendToArray
 
 function sendToArray() {
     const areaContent = document.getElementById("outArray").value
-    console.log(areaContent)
 
     const prepareContent = areaContent.replaceAll("\r", " ").replaceAll("\n", " ").split(' ').filter(item => item !== '')
     box = prepareContent
@@ -101,11 +69,15 @@ function sendToArray() {
 
 
 
-    groupPlayers(shuffled, groupNum);
+    const result = groupPlayers(shuffled, groupNum);
+    document.getElementById(" inputArray").innerHTML = result
+
 
 }
 
 
+
+module.exports = groupPlayers
 //#1 check index from shuffles
 //#2 tidy up function: check return of groupPlayers
 //when list in textarea is updated, plan to add it as new by delete the previous array
