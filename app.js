@@ -17,6 +17,7 @@ const groupPlayers = function (array, groupNum) {
     const groups = {};
     const peopleLeftOut = array.length % groupNum;
     const peopleEven = array.length - peopleLeftOut;
+    const remainderPeople = array.slice(-peopleLeftOut)
 
     if (array.length % groupNum === 0) {
         for (let i = 1; i <= groupNum; i++) {
@@ -63,21 +64,21 @@ function sendToArray() {
     const prepareContent = areaContent.replaceAll("\r", " ").replaceAll("\n", " ").split(' ').filter(item => item !== '')
     box = prepareContent
 
-    const groupNum = document.getElementById(" inputGroupNumber").value;
+    const groupNum = document.getElementById("inputGroupNumber").value;
 
     const shuffled = shuffling(box);
 
 
 
     const result = groupPlayers(shuffled, groupNum);
-    document.getElementById(" inputArray").innerHTML = result
+    document.getElementById("inputArray").innerHTML = result
 
 
 }
 
 
 
-module.exports = groupPlayers
+// module.exports = groupPlayers
 //#1 check index from shuffles
 //#2 tidy up function: check return of groupPlayers
 //when list in textarea is updated, plan to add it as new by delete the previous array
