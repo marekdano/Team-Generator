@@ -4,7 +4,7 @@
 }
 
 body {
-    background: url("assets/images/background.jpeg");
+    /* background: url("assets/images/background.jpeg"); */
     background-attachment: fixed;
     background-size: cover;
     color:rgba(0, 0, 0);
