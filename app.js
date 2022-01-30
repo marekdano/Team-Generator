@@ -1,4 +1,4 @@
-//varaibles
+//variables
 box = []
 
 //shuffling rule
@@ -50,12 +50,7 @@ const groupPlayers = function (array, groupNum) {
         str += `\n\n\n`
     });
     return str
-
-
 };
-
-
-document.getElementById("generate-button").addEventListener("click", sendToArray);
 
 function sendToArray() {
     const areaContent = document.getElementById("outArray").value
@@ -71,9 +66,11 @@ function sendToArray() {
 
     const result = groupPlayers(shuffled, groupNum);
     document.getElementById(" inputArray").innerHTML = result
-
-
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById("generate-button").addEventListener("click", sendToArray);
+});
 
 
 
@@ -82,7 +79,7 @@ module.exports = groupPlayers
 //#2 tidy up function: check return of groupPlayers
 //when list in textarea is updated, plan to add it as new by delete the previous array
 //error handling: groupNUm > group.length
-//accidental space inbetween words like "pa blo"
+//accidental space in between words like "pa blo"
 //list as API
 
 //tidy up input list and auto reprint it

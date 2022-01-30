@@ -1,9 +1,10 @@
 {
   "name": "team-generator",
   "version": "0.0.0",
-  "description": "- [Description](#description)\r - [How to use it](#how-to-use-it)\r - [Contributing](#contributing)\r - [Reference](#reference)\r - [License](#license)\r - [Contact](#contact)",
+  "description": "The app allows you to enter a list of name and create how many groups you wish in a random fashion",
   "main": "index.html",
   "scripts": {
+    "test:dev": "jest --watch",
     "test": "jest"
   },
   "author": "mr",
